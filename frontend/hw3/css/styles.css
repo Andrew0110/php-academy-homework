@@ -1,0 +1,263 @@
+﻿ul {
+    list-style: none;
+}
+
+li {
+    float: left;
+    margin-left: 1px;
+}
+
+li+li {
+    margin-left: 5px;
+}
+
+li>a {
+    text-decoration: none;
+    color: #63B8FF;
+}
+
+li>a:hover {
+    text-decoration: underline;
+}
+
+form {
+    width: 10%;
+    min-width: 250px;
+    border: 1px solid grey;
+    padding: 2px;
+}
+
+.inner-list {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    color: #63B8FF;
+    cursor: default;
+}
+
+.inner-list>ul {
+    display: none;
+    padding: 0px;
+}
+
+.inner-list>ul li {
+    float: none;
+    margin-left: 0px;
+}
+
+.inner-list:hover {
+    text-decoration: none;
+}
+
+.inner-list:hover ul {
+    display: block;
+}
+
+.current-page-link {
+    cursor: default;
+}
+
+.current-page-link:hover {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 500px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    float: left;
+    background-color: red;
+    margin-left: 10px
+}
+
+.animated {
+    -webkit-transition: border-radius 1s, background-color 1s;
+    -moz-transition: border-radius 1s, background-color 1s;
+    -o-transition: border-radius 1s, background-color 1s;
+    transition: border-radius 1s, background-color 1s;
+}
+
+.animated:hover {
+    border-radius: 30px;
+    background-color: blue;
+}
+
+.card-container {
+    position: relative;
+    top: 100px;
+}
+
+
+@-moz-keyframes turningCard {
+    0% {
+        -moz-transform: perspective(800px) rotateY(0deg);
+    }
+    
+    50% {
+        -moz-transform: perspective(800px) rotateY(90deg);
+    }
+    
+    100% {
+        -moz-transform: perspective(800px) rotateY(90deg);
+    }
+}
+
+@keyframes turningCard {
+    0% {
+        transform: perspective(800px) rotateY(0deg);
+    }
+    
+    50% {
+        transform: perspective(800px) rotateY(90deg);
+    }
+    
+    100% {
+        transform: perspective(800px) rotateY(90deg);
+    }
+}
+
+@-webkit-keyframes turningCard {
+    0% {
+        -webkit-transform: perspective(800px) rotateY(0deg);
+    }
+    
+    50% {
+        -webkit-transform: perspective(800px) rotateY(90deg);
+    }
+    
+    100% {
+        -webkit-transform: perspective(800px) rotateY(90deg);
+    }
+}
+
+@-o-keyframes turningCard {
+    0% {
+        -o-transform: perspective(800px) rotateY(0deg);
+    }
+    
+    50% {
+        -o-transform: perspective(800px) rotateY(90deg);
+    }
+    
+    100% {
+        -o-transform: perspective(800px) rotateY(90deg);
+    }
+}
+
+.rounder {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    
+            /* имя анимации */
+            -moz-animation-name: turningCard;
+            -o-animation-name: turningCard;
+            -webkit-animation-name: turningCard;
+            animation-name: turningCard;
+
+            /* продолжительность анимации */
+            -moz-animation-duration: 2s;
+            -o-animation-duration: 2s;
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+
+            /* проиграть анимацию до конца а потом в обратную сторону */
+            -moz-animation-direction: alternate;
+            -o-animation-direction: alternate;
+            -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+            
+            -moz-animation-iteration-count: infinite;
+            -o-animation-iteration-count: infinite;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+
+@-moz-keyframes turningBack {
+    0% {
+        -moz-transform: perspective(800px) rotateY(0deg);
+    }
+    
+    50% {
+        -moz-transform: perspective(800px) rotateY(90deg);
+    }
+    
+    100% {
+        -moz-transform: perspective(800px) rotateY(90deg);
+    }
+}
+
+@keyframes turningBack {
+    0% {
+        transform: perspective(800px) rotateY(0deg);
+    }
+    
+    50% {
+        transform: perspective(800px) rotateY(90deg);
+    }
+    
+    100% {
+        transform: perspective(800px) rotateY(90deg);
+    }
+}
+
+@-webkit-keyframes turningBack {
+    0% {
+        -webkit-transform: perspective(800px) rotateY(90deg);
+    }
+    
+    50% {
+        -webkit-transform: perspective(800px) rotateY(90deg);
+    }
+    
+    100% {
+        -webkit-transform: perspective(800px) rotateY(180deg);
+    }
+}
+
+@-o-keyframes turningBack {
+    0% {
+        -o-transform: perspective(800px) rotateY(90deg);
+    }
+    
+    50% {
+        -o-transform: perspective(800px) rotateY(90deg);
+    }
+    
+    100% {
+        -o-transform: perspective(800px) rotateY(180deg);
+    }
+}
+
+.back-rounder {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    
+            /* имя анимации */
+            -moz-animation-name: turningBack;
+            -o-animation-name: turningBack;
+            -webkit-animation-name: turningBack;
+            animation-name: turningBack;
+
+            /* продолжительность анимации */
+            -moz-animation-duration: 2s;
+            -o-animation-duration: 2s;
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+
+            /* проиграть анимацию до конца а потом в обратную сторону */
+            -moz-animation-direction: alternate;
+            -o-animation-direction: alternate;
+            -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+            
+            -moz-animation-iteration-count: infinite;
+            -o-animation-iteration-count: infinite;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
