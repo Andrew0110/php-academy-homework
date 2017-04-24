@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Homework 2</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+<ul>
+    <li><a href="#top" name="top" class="current-page-link">Home</a></li>
+    <li><a href="contacts.html">Contacts</a></li>
+    <li><a href="about.html#about-anchor">About</a></li>
+    <li class="inner-list">Links:
+        <ul>
+            <li><a href="#anchor">Anchor</a></li>
+            <li><a href="http://www.coffeecup.com/help/articles/absolute-vs-relative-pathslinks/">Abs &amp; rel links</a></li>
+        </ul>
+    </li>
+</ul>
+<br/>
+<br/>
+<br/>
+<br/>
+<form action="#" method="get">
+    <fieldset>
+        <legend>Your message Form</legend>
+        <label for="name">Enter your name:</label><br/>
+        <input type="text" name="name" id="name" required><br/>
+        <label for="surname">Enter your surname:</label><br/>
+        <input type="text" name="surname" id="surname"><br/>
+        <label for="email">Enter your email:</label><br/>
+        <input type="email" name="email" id="email" required><br/>
+        <label for="country">Your country:</label>
+        <select name="country" id="country">
+            <option value="Ukraine">Ukraine</option>
+            <option value="Poland">Poland</option>
+            <option value="USA">USA</option>
+        </select><br/>
+        <label>Your sex:</label>
+        <input type="radio" name="sex" value="Male" title="Male">Male
+        <input type="radio" name="sex" value="Female" title="Female">Female<br/>
+        <input type="checkbox" name="adult">I am adult<br/>
+        <label for="message">Enter your message:</label><br/>
+        <textarea cols="18" rows="5" name="message" id="message" style="resize: none;"></textarea>
+    </fieldset>
+    <input type="submit">
+    <input type="reset">
+</form>
+<br/>
+<a name="anchor" href="#top"><strong>Anchors works only with &lt;a&gt; tag</strong></a>
+</body>
+</html>

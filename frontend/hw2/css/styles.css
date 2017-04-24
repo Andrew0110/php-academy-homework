@@ -1,0 +1,60 @@
+﻿ul {
+    list-style: none;
+}
+
+li {
+    float: left;
+    margin-left: 1px;
+}
+
+li+li {
+    margin-left: 5px;
+}
+
+li>a {
+    text-decoration: none;
+    color: #63B8FF;
+}
+
+li>a:hover {
+    text-decoration: underline;
+}
+
+form {
+    width: 10%;
+    min-width: 250px;
+    border: 1px solid grey;
+    padding: 2px;
+}
+
+.inner-list {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    color: #63B8FF;
+}
+
+.inner-list>ul {
+    display: none;
+    padding: 0px;
+}
+
+.inner-list>ul li {
+    float: none;
+    margin-left: 0px;
+}
+
+.inner-list:hover {
+    text-decoration: none;
+}
+
+.inner-list:hover ul {
+    display: block;
+}
+
+.current-page-link {
+    cursor: default;
+}
+
+.current-page-link:hover {
+    text-decoration: none;
+}
