@@ -31,6 +31,7 @@ form {
     text-decoration: underline;
     text-decoration-style: dashed;
     color: #63B8FF;
+    cursor: default;
 }
 
 .inner-list>ul {
