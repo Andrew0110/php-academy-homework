@@ -22,7 +22,11 @@
 			$result = $a * $b;
 			break;
 		case '%':
-			$result = $a % $b;
+			if ($b != 0) {
+				$result = $a % $b;
+			} else {
+				$result = 'Division by Zero (-:';
+			}
 			break;
 
 		default:
