@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Завдання 4</title>
+
+    <script type="text/javascript">
+
+        var A = +prompt('Введіть менше число');
+        var B = +prompt('Введіть більше число');
+
+        var sum = 0, oddNumbers = '';
+        for (var i = A; i <= B; ++i) {
+            if ( i%2 != 0 ) {
+                oddNumbers += ' ' + i;
+            }
+            sum += i;
+        };
+        document.write('Сума всіх значень: ' + sum + '. Всі непарні значення: ' + oddNumbers + '.<br/>');
+        
+
+    </script>
+
+</head>
+<body>
+</body>
+</html>

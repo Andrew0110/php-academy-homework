@@ -1,5 +1,5 @@
 <?php
-	$age = 'te';
+	$age = 'test';
 
 	# if (($age == 0 && $age !== 0) || $age < 0) {
 	if (($age == 0 && $age !== '0' && gettype($age) == 'string') || $age < 0) {
