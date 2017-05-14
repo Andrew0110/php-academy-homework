@@ -1,0 +1,150 @@
+.box {
+    border: 1px solid black;
+    width: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    /*flex-shrink: 1;*/
+    flex-grow: 1;
+    flex-wrap: wrap-reverse; 
+    /*flex-basis: 200px;*/
+    /*height: 200px;*/
+}
+
+.box>div {
+    /*height: 50px;*/
+    padding: 20px;
+    margin: 10px;
+/*    display: flex;
+    align-items: center;
+    justify-content: center;*/
+}
+
+.first {
+    background-color: red;
+}
+
+.second {
+    background-color: green;
+}
+
+.third {
+    background-color: blue;
+}
+
+/*==================task2===================*/
+.grid-task2 {
+    display: flex;
+    border: 1px solid gray;
+    width: 50%;
+}
+
+#p1 {
+    border: 1px solid red;
+    -moz-box-flex: 1.0;
+    -webkit-box-flex: 1.0;
+    flex: 1.0;
+    flex-basis: 100px;
+}
+
+#p2 {
+    border: 1px solid blue;
+    -moz-box-flex: 2.0;
+    -webkit-box-flex: 2.0;
+    flex: 2.0;
+    flex-basis: 200px;
+}
+
+
+/*==================task3===================*/
+.grid-task3 {
+    border: 1px solid gray;
+    height: 500px;
+    width: 50%;
+
+    display: flex;
+    align-items: flex-end;
+}
+
+.grid-task3>div {
+    width: 100px;
+    height: 50px;
+}
+
+/*==================task4===================*/
+.grid-task4 {
+    border: 1px solid gray;
+    height: 500px;
+    width: 50%;
+
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.grid-task4>div {
+    width: 100px;
+    height: 50px;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid gray;
+    background-color: magenta;
+}
+
+/*==================task5===================*/
+.grid-task5 {
+    border: 1px solid gray;
+    height: 500px;
+    width: 50%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid-task5>div {
+    width: 100px;
+    height: 50px;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid gray;
+    background-color: orange;
+}
+
+/*==================task6===================*/
+
+body, html {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer, .main-content {
+    border: 1px solid gray;
+    width: 95%;
+    margin: 10px 0px;
+    padding: 10px;
+}
+
+.main-content {
+    display: flex;
+}
+
+.content {
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    -ms-box-flex: 1;
+    box-flex: 1;
+    padding: 5px;
+    background-color: orange;
+}
+
+.aside {
+    background-color: green;
+    padding: 5px;
+}
+
+.main-content nav {
+    background-color: yellow;
+    padding: 5px;
+}

@@ -1,0 +1,59 @@
+<html>
+<head>
+    <title>Завдання 4</title>
+
+    <script type="text/javascript">
+        function add(num1, num2) {
+            return num1+num2;
+        }
+        function sub(num1, num2) {
+            return num1-num2;
+        }
+        function mult(num1, num2) {
+            return num1*num2;
+        }
+        function div(num1, num2) {
+            if (num2 == 0) {
+                return 'Деление на 0!';
+            }
+            return num1/num2;
+        }
+        var num1 = +prompt('Введіть перше число');
+        var num2 = +prompt('Введіть друге число');
+        var operator = prompt('Введіть оператор');
+
+        var result = 0;
+        var error = false;
+        switch (operator) {
+            case '+':
+                result = add(num1, num2);
+                break;
+            case '-':
+                result = sub(num1, num2);
+                break;
+            case '*':
+                result = mult(num1, num2);
+                break;
+            case '/':
+                result = div(num1, num2);
+                if (typeof result == "string") {
+                    error = result;
+                }
+                break;
+            default:
+                error = "Неизвестный знак";
+        }
+        
+        
+        if (!error) {
+            document.write('Результат: '+ num1+' '+ operator + ' ' + num2 +' = ' + result + '<br/>');
+        } else {
+            document.write(error + '<br/>');
+        }
+        
+        
+    </script>
+</head>
+<body>
+</body>
+</html>

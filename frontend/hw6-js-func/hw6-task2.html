@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>Завдання 2</title>
+
+    <script type="text/javascript">
+
+        var number = +prompt('Введіть кількість рядків');
+
+        var result = "";
+        for (var i = 1; i <= number; ++i) {
+            for (var j = 1; j <= number; ++j) {
+                result += "*";
+            }
+            result += "<br/>";
+        }
+        document.write('Прямокутник: <br/>' + result);
+        
+        result = "";
+        for (var i = 1; i <= number; ++i) {
+            for (var j = 1; j <= i; ++j) {
+                result += "*";
+            }
+            result += "<br/>";
+        }
+        document.write('Прямокутний трикутник: <br/>' + result);
+        
+        result = "";
+        var spaces = number - 1;
+        for (var i = 1; i <= number; ++i) {
+            for (var j = 1; j <= spaces; ++j) {
+                result += "&nbsp&nbsp";
+            }
+            --spaces;
+            var lenOfStars = (i-1)*2+1;
+            for (var j = 1; j <= lenOfStars; ++j) {
+                result += "*";
+            }
+            result += "<br/>";
+        }
+        document.write('Рівнобедрений трикутник: <br/>' + result);
+        
+        result = "";
+        var spaces = number - 1;
+        var rombRows = 2*number-1;
+        for (var i = 1; i <= rombRows; ++i) {
+            for (var j = 1; j <= spaces; ++j) {
+                result += "&nbsp&nbsp";
+            }
+            var lenOfStars;
+            if (i < number) {
+                --spaces;
+                lenOfStars = (i-1)*2+1;
+            } else {
+                ++spaces;
+                lenOfStars = 4*number - 1 - 2*i;
+            }
+            
+            for (var j = 1; j <= lenOfStars; ++j) {
+                result += "*";
+            }
+            result += "<br/>";
+        }
+        document.write('Ромб: <br/>' + result);
+    </script>
+</head>
+<body>
+</body>
+</html>

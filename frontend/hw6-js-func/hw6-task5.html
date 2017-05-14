@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title>Завдання 5</title>
+
+    <script type="text/javascript">
+        function isSimple(number) {
+            if (number == 2 || number == 3) {
+                return true;
+            }
+            if (number%2 == 0 || number < 2) {
+                return false;
+            }
+            
+            var maxMultiple = Math.sqrt(number);
+            for (var i = 3; i <= maxMultiple; i+=2) {
+                if (number % i == 0) {
+                    return false;
+                }
+            }
+            
+            return true;
+        }
+        
+        function check(number) {
+            var result = 'Інформація по числу ' + number + ': ';
+            if (number > 0) {
+                result += 'Додатнє, ';
+            } else if (number == 0){
+                result += 'Нуль, ';
+            } else {
+                result += 'Від\'ємне, ';
+            }
+            
+            if (isSimple(number)) {
+                result += 'Просте, ';
+            } else {
+                result += 'Не просте, ';
+            }
+            
+            var array = [2,5,3,6,9];
+            var arrayDivs = [];
+            var arrayNotDivs = [];
+
+            result += 'Із чисел ';
+            for (var num in array) {
+                result += array[num] + ', ';
+                if (number % array[num] == 0) {
+                    arrayDivs.push(array[num]);
+                } else {
+                    arrayNotDivs.push(array[num]);
+                }
+            }
+            if (arrayDivs.length > 0) {
+                result += 'ділиться без остачі на: ';
+                for (var num in arrayDivs) {
+                    result += array[num] + ', ';
+                }
+            }
+            if (arrayNotDivs.length > 0) {
+                result += 'не ділиться без остачі на: ';
+                for (var num in arrayNotDivs) {
+                    result += array[num] + ', ';
+                }
+            }
+            
+            document.write(result + '<br/>');
+        }
+
+        var number = +prompt('Введіть число');
+        check(number);
+        
+        
+    </script>
+</head>
+<body>
+</body>
+</html>
