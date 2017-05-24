@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function array2dToTable(array) {
+            var result = '<table>';
+            for (var i = 0; i < array.length; i++) {
+                result += '<tr>';
+                var lineOfArr = array[i];
+                for (var j = 0; j < lineOfArr.length; j++) {
+                    result += '<td>' + lineOfArr[j] + '</td>';
+                }
+                result += '</tr>';
+            }
+            result += '</table>';
+            return result;
+        }
+        
+        function randomWithMinAndMax(minNum, maxNum) {
+            return Math.floor(Math.random()*(maxNum-minNum))+minNum;
+        }
+        
+        var number = +prompt('Введіть розмірність масиву');
+        var array = [];
+        
+        for (var i = 0; i < number; i++) {
+            var lineOfArr = [];
+            for (var j = 0; j < number; j++) {
+                lineOfArr[j] = randomWithMinAndMax(-10000, 10000);
+            }
+            array[i] = lineOfArr;
+        }
+        
+        for (var i = 0; i < number; i++) {
+            if (array[i][i] < 0) {
+                array[i][i] = 0;
+            } else {
+                array[i][i] = 1;
+            }
+        }
+        
+        var answer = 'Массив: ' + array2dToTable(array) + '<br/>';
+        document.write(answer);
+    </script>
+</body>
+</html>

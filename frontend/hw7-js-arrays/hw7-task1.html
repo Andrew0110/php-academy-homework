@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function arrayToStr(array) {
+            var result = String(array[0]);
+            for (var i = 1; i < array.length; i++) {
+                result += ', ' + array[i];
+            }
+            return result;
+        }
+        
+        function randomWithMinAndMax(minNum, maxNum) {
+            return Math.floor(Math.random()*(maxNum-minNum))+minNum;
+        }
+        
+        var number = +prompt('Введіть кількість елементів масиву');
+        var array = [];
+        
+        for (var i = 0; i < number; i++) {
+            array[i] = randomWithMinAndMax(1000, 10000);
+        }
+        
+        var oddArr = [];
+        var max = array[0], min = array[0], sum = 0;
+        for (var i = 0; i < array.length; i++) {
+            sum += array[i];
+            if (min > array[i]) {
+                min = array[i];
+            }
+            if (max < array[i]) {
+                max = array[i];
+            }
+            if (array[i] % 2 != 0) {
+                oddArr.push(array[i]);
+            }
+        }
+        
+        var answer = 'Масив: ' + arrayToStr(array) + '<br/>Мінімальне значення масиву: ' + min + ' <br/>Максимальне значення масиву: ' + max + ' <br/>Сума елементів масиву: ' + sum + ' <br/>Середнє арифметичне масиву: ' + sum/array.length + ' <br/>Непарні значення масиву: ' + arrayToStr(oddArr) + '<br/>';
+        document.write(answer);
+    </script>
+</body>
+</html>
